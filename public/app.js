@@ -1,7 +1,7 @@
 angular.module('sortApp', [])
 
 .controller('mainController', function($scope, $http) {
-  $scope.sortType     = 'title'; // set the default sort type
+  $scope.sortType     = 'deck'; // set the default sort type
   $scope.sortReverse  = false;  // set the default sort order
   $scope.searchEndpoint   = '';     // set the default search/filter term
   
