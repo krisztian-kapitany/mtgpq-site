@@ -1,7 +1,12 @@
-body { padding-top:50px; }
+body { padding-top:10px; }
 
 .cardTable {
   text-align: left;
+}
+
+.cardCnt {
+  margin: 10px 0 10px 0;
+  
 }
 
 .cardWrapper {

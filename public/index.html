@@ -27,7 +27,8 @@
 	  </form>
 
 		<div class="cardTable">
-			<div class="cardWrapper" ng-repeat="card in cards | orderBy:sortType:sortReverse | filter:searchCards">
+      <div class="cardCnt">Showing: {{filtered.length}} results</div>
+			<div class="cardWrapper" ng-repeat="card in cards | filter:searchCards | orderBy:sortType:sortReverse as filtered">
 				<div class="cardArt" ng-click="toggleActive(card.id)">
 						<img ng-src="./img/{{card.deck}}/{{card.title}}.jpg" />
 				</div>
