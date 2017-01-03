@@ -32,12 +32,14 @@
 				<div class="cardArt" ng-click="toggleActive(card.id)">
 						<img ng-src="./img/{{card.deck}}/{{card.title}}.jpg" />
 				</div>
-				<div class="cardDetail" ng-show="activeCard == card.id">
-						<ul>
-							<li ng-repeat="(key, value) in card">
-								{{key}}: {{value}}
-							</li>
-						</ul>
+				<div class="cardDetail form-group" ng-show="activeCard == card.id">
+          <label for="rawData">Raw Data</label>
+          <textarea class="form-control" rows="10" cols="40" id="rawData">{{prettyCard(card)}}</textarea>
+					<!-- <ul> -->
+						<!-- <li ng-repeat="(key, value) in card"> -->
+							<!-- {{key}}: {{value}} -->
+						<!-- </li> -->
+					<!-- </ul> -->
 				</div>
 			</div>
 		</div>

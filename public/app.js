@@ -15,5 +15,9 @@ angular.module('sortApp', [])
   $scope.toggleActive = function(id) {
     $scope.activeCard = $scope.activeCard == id ? "" : id ;
   }
+  
+  $scope.prettyCard = function(card) {
+    return JSON.stringify(card, undefined, 4);
+  }
 
 });
