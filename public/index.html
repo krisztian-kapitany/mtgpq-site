@@ -20,9 +20,10 @@
 	  <form>
 		<div class="form-group">
 		  <div class="input-group">
-			<div class="input-group-addon"><i class="fa fa-search"></i></div>
-			<input type="text" class="form-control" placeholder="Filter" ng-model="searchCards">
-		  </div>      
+        <div class="input-group-addon"><i class="fa fa-search"></i></div>
+        <input type="text" class="form-control" placeholder="Filter" ng-model="searchCards">
+		  </div>
+      <button type="button" class="btn btn-primary" ng-click="saveToPc()">Download</button>
 		</div>
 	  </form>
 
@@ -33,13 +34,14 @@
 						<img ng-src="./img/{{card.deck}}/{{card.title}}.jpg" />
 				</div>
 				<div class="cardDetail form-group" ng-show="activeCard == card.id">
-          <label for="rawData">Raw Data</label>
-          <textarea class="form-control" rows="10" cols="40" id="rawData">{{prettyCard(card)}}</textarea>
-					<!-- <ul> -->
-						<!-- <li ng-repeat="(key, value) in card"> -->
-							<!-- {{key}}: {{value}} -->
-						<!-- </li> -->
-					<!-- </ul> -->
+          <!-- <label for="rawData">Raw Data</label> -->
+          <!-- <textarea class="form-control" rows="10" cols="40" id="rawData">{{prettyCard(card)}}</textarea> -->
+					<ul>
+						<li ng-repeat="(key, value) in card">
+              {{key}}
+              <input type="text" class="form-control" placeholder="{{value}}" ng-model="card[key]">
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>
