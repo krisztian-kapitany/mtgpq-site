@@ -8,7 +8,7 @@ angular.module('sortApp', [])
   $scope.activeCard = ""
   $scope.cards = [];
   
-  $http.get('./card-db.json').success(function(data){
+  $http.get('./download.json').success(function(data){
         $scope.cards = data;
   });
 
